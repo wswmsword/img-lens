@@ -1,0 +1,59 @@
+{
+  "name": "img-lens",
+  "version": "1.0.0",
+  "description": "A React lens component to zoom into images.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "scripts": {
+    "watch": "npm-watch",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wswmsword/img-lens.git"
+  },
+  "keywords": [
+    "image",
+    "lens",
+    "ui-component",
+    "react",
+    "react-component"
+  ],
+  "author": "wswmsword",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wswmsword/img-lens/issues"
+  },
+  "homepage": "https://github.com/wswmsword/img-lens#readme",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/node": "^22.13.14",
+    "npm-watch": "^0.13.0",
+    "rollup": "^4.38.0",
+    "rollup-plugin-postcss": "^4.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "*"
+      ],
+      "extensions": "css, js",
+      "ignore": [
+        "dist",
+        "node_modules"
+      ]
+    }
+  },
+  "sideEffects": false
+}
