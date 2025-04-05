@@ -1,12 +1,14 @@
 import React, { useRef, useState } from "react";
 import styles from "./index.module.css";
 
-export default function Lens({ src, size = 234, scale = 2, style, className, lensStyle, lensClassName, lensProps, onClick, ...otherProps }) {
+export default function Lens({ src, size = 234, scale = 2, style, className, lensProps = {}, onClick = () => {}, ...otherProps }) {
   const [lensPos, setP] = useState("");
   const [lensImgStyle, setS] = useState({});
   const imgRef = useRef();
   const originScale = useRef(1);
   const [entered, setE] = useState(false);
+
+  const { lensStyle, ...otherLensProps } = lensProps;
 
   return <>
     <img ref={imgRef} src={src} onLoad={loaded} style={style} className={className}
@@ -15,13 +17,13 @@ export default function Lens({ src, size = 234, scale = 2, style, className, len
       onMouseLeave={leave}
       onClick={click}
       {...otherProps} />
-    <div className={`${styles.l3} ${entered ? styles.show : ""}`}>
+    <div aria-hidden="true" className={`${styles.l3} ${entered ? styles.show : ""}`}>
       <div className={styles.l2} style={{ transform: lensPos }}>
         <div
           className={`${styles.l1} ${entered ? styles.scale : ""}`}
-          style={{ width: `${size}px`, height: `${size}px` }}
-          {...lensProps}>
-          <img src={src} style={{ ...lensImgStyle, ...lensStyle }} className={`${styles.lensImg} ${lensClassName}`} />
+          style={{ width: `${size}px`, height: `${size}px`, ...lensStyle }}
+          {...otherLensProps}>
+          <img src={src} style={{ ...lensImgStyle }} className={`${styles.lensImg}`} />
         </div>
       </div>
     </div>
