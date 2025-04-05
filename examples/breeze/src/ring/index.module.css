@@ -1,0 +1,54 @@
+.ring {
+/* 	--character-width: 1ch; */
+	--inner-angle: calc((360 / var(--char-count)) * 1deg);
+	--character-width: 1;
+	font-family: monospace;
+	text-transform: uppercase;
+	font-size: calc(var(--font-size, 1) * 1rem);
+	position: fixed;
+	width: 0;
+	height: 0;
+	font-weight: bold;
+	color: #213547;
+}
+
+.screenRenderOnly {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ring {
+  	-webkit-animation: spin 6s infinite linear;
+  	        animation: spin 6s infinite linear;  
+  }
+  @-webkit-keyframes spin {
+    to {
+      rotate: -360deg;
+    }
+  }
+  @keyframes spin {
+    to {
+      rotate: -360deg;
+    }
+  }
+}
+
+.char {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+/* 	line-height: 1; */
+	transform:
+		translate(-50%, -50%)
+		rotate(calc(var(--inner-angle) * var(--char-index)))
+		translateY(var(--radius));
+}

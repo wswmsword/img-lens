@@ -5,8 +5,10 @@
 
   color-scheme: light dark;
   color: #213547;
-  background-image: radial-gradient(circle, #fff 0%, #b4fca3 100%);
-
+  /* background-image: radial-gradient(circle, #fff 0%, #2b8369 100%); */
+  /* background-image: radial-gradient(circle, #fff 0%, #0ab4c8 90%, #177352 100%); */
+  background-image: radial-gradient(circle, #fff 0%, #44a6a7 90%, #177352 100%);
+/* 0aaec8 */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

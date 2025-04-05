@@ -21,16 +21,46 @@
   margin: 0 auto;
 }
 
+.img1, .img2 {
+  width: 300px;
+  height: 200px;
+}
+
+.img3 {
+  width: 160px;
+  height: 240px;
+}
+
+.img4 {
+  width: 280px;
+  height: 210px;
+}
+
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-grow: 1;
 }
 
 .title {
   position: relative;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 0;
+}
+
+.desc {
+  color: #8294a4;
+  margin-bottom: 0;
+}
+
+.l {
+  color: #8294a4;
+}
+
+.l:hover {
+  color: #213547;
 }
 
 .fake_wrap {
@@ -59,4 +89,21 @@
   position: absolute;
   transform: translate(-29px, -6px);
   font-size: 60px;
+}
+
+@media (max-width: 768px) {
+  .img1, .img2 {
+    width: 200px;
+    height: 133.6px;
+  }
+
+  .img3 {
+    width: 120px;
+    height: 180px;
+  }
+
+  .img4 {
+    width: 180px;
+    height: 135px;
+  }
 }
