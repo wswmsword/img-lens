@@ -68,7 +68,6 @@
   height: 40px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid black;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -85,10 +84,17 @@
   right: 6px;
 }
 
-.emoji {
+/* .emoji {
   position: absolute;
   transform: translate(-29px, -6px);
   font-size: 60px;
+} */
+
+.m {
+  position: absolute;
+  transform: translate(-30px, -4px);
+  width: 60px;
+  height: 60px;
 }
 
 @media (max-width: 768px) {

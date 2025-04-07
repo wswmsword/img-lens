@@ -1,12 +1,12 @@
 import './App.css'
 import ImgLens from "img-lens";
 import Ring from "./ring";
+import m from "./assets/left-pointing-magnifying-glass.png";
 
 function App() {
-
   return (<>
     <div className="content">
-      <h1 className="title">img-lens<span className="fake_wrap" aria-hidden><span className="fake_t">s</span></span><span className="emoji">🔍</span></h1>
+      <h1 className="title">img-lens<span className="fake_wrap" aria-hidden><span className="fake_t">s</span></span>{/* <span className="emoji">🔍</span> */}<img className="m" src={m} /></h1>
       <p className="desc">A React lens component to zoom into images.</p>
       <a className="l" href="https://github.com/wswmsword/img-lens">GitHub</a>
     </div>
